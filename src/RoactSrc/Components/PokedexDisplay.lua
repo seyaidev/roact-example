@@ -43,13 +43,13 @@ function pokedexDisplay:render()
             Size = UDim2.new(0.5, 0, 0.1, 0),
             Position = UDim2.new(0.5, 0, 0.8, 0),
             BackgroundTransparency = 0.5,
-            Font = Enum.Font.GothamSemibold,
+            Font = Enum.Font.GothamBold,
             TextScaled = true,
             TextColor3 = Color3.new(1,1,1),
             BackgroundColor3 = Color3.new(),
             AnchorPoint = Vector2.new(0.5),
 
-            Text = monfo.Name
+            Text = "#" .. tostring(entryNo) .. ": " .. monfo.Name,
         }, {
             Corner = defaultCorner
         })

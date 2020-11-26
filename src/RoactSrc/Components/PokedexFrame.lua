@@ -61,7 +61,8 @@ function pokedexFrame:render()
     return Roact.createElement("Frame", {
         Size = UDim2.new(0.6, 0, 0.4),
         AnchorPoint = Vector2.new(0.5, 0.5),
-        Position = UDim2.new(0.5, 0, 0.5, 0)
+        Position = UDim2.new(0.5, 0, 0.5, 0),
+        BackgroundColor3 = Color3.fromRGB(235, 91, 91)
     }, children)
 end
 
