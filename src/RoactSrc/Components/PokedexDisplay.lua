@@ -10,10 +10,10 @@ local PokemonInfo  = require(ReplicatedStorage.RoactSrc.Components:WaitForChild(
 local pokedexDisplay = Roact.Component:extend("PokedexDisplay")
 
 function pokedexDisplay:render()
-
+    local entryNo = self.props.entryNo
     local monfo 
     if self.props.entryNo > 0 then
-        monfo = PokemonInfo[self.props.entryNo]
+        monfo = PokemonInfo[entryNo]
     else
         monfo = {
             Name = "",
@@ -24,10 +24,11 @@ function pokedexDisplay:render()
     return Roact.createElement("Frame", {
         Size = UDim2.new(0.5, 0, 1, 0),
         Position = UDim2.new(0.5, 0, 0, 0),
-        BackgroundTransparency = 1,
+        BackgroundColor3 = Color3.fromRGB(235, 214, 157),
 
         Visible = monfo.Name ~= ""
     }, {
+        Corner = defaultCorner,
         Image = Roact.createElement("ImageLabel", {
             Size = UDim2.new(0.5, 0, 0.5, 0),
             AnchorPoint = Vector2.new(0.5, 0),
